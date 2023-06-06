@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello Api Calling...</title>
+    <style>
+      body {
+        text-align: center;
+        /* background-image: url("./Download.jpg"); */
+        background-color: rgba(255, 255, 128, .5);
+        background-position: center;
+      }
+      span {
+        background-color: aqua;
+      }
+      ul {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      li {
+        padding: 5px 10px;
+        background-color: #eeeeee;
+        border: 1px solid #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>API</h2>
+    <p>Hii Server is live Please acces all the data thorugh</p>
+    <ul>
+      <li>just give <span>api/products/</span> for all the data</li>
+      <br />
+      <li>
+        <span>api/products/?sort=by name,price</span> anything u want just
+        put-before parameeter
+      </li>
+      <br />
+      <li>
+        You can use select just <span>api/products/?select=name</span> like this
+      </li>
+      <br />
+      <li>
+        You can directly search over name and company also
+        <span>api/products/?name=iphone types....</span>
+      </li>
+    </ul>
+  </body>
+</html>

@@ -3,13 +3,13 @@ const express = require('express')
 const app = express()
 const PORT = process.env.PORT || 5000
 const connectDB = require('./db/connect')
+const path = require('path');
+
 
 const product_routes = require('./routes/products')
 
 app.get('/', (req, res) => {
-  res.send(
-    'Hii Server is live Please acces all the data thorugh 1.>just give api/products/ for all the data 2.>api/products/?sort=by name,price anything u want just put-before parameeter 3.>You can use select just api/products/?select=name like this  4.>You can directly search over name and company also api/products/?name=iphone types....  Just amaxzing😎 '
-  )
+  res.sendFile(path.resolve('details.html'));
 })
 //middleware to setports
 app.use('/api/products', product_routes)
@@ -25,4 +25,4 @@ const start = async () => {
   }
 }
 
-start()
+start();
